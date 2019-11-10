@@ -42,7 +42,7 @@ if __name__ == '__main__':
     vade=VaDE(args)
     if args.cuda:
         vade=vade.cuda()
-        vade=nn.DataParallel(vade,device_ids=range(4))
+        # vade=nn.DataParallel(vade,device_ids=range(4))
 
     vade.pre_train(DL,pre_epoch=50)
 
